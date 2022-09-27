@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="secondary">
       <ion-button (click)="limpar()">
         <ion-icon name="trash-outline"></ion-icon>
@@ -9,41 +9,41 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-label position="stacked">Valor 01</ion-label>
+<ion-content [fullscreen]="true" color="medium" class="ion-padding  ">
+  <ion-item class="ion-margin-vertical">
+    <ion-label position="floating">Valor 01</ion-label>
     <ion-input [(ngModel)]="valor1"></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Valor 02</ion-label>
+  <ion-item class="ion-margin-bottom">
+    <ion-label position="floating">Valor 02</ion-label>
     <ion-input [(ngModel)]="valor2"></ion-input>
   </ion-item>
 
   <ion-grid>
-    <ion-row>
+    <ion-row class="ion-margin-vertical ion-align-items-center">
       <ion-col size="3">
-        <ion-button (click)="mostrarAlertaSoma()">+</ion-button>
+        <ion-button (click)="mostrarAlertaSoma()" color="dark">+</ion-button>
       </ion-col>
       <ion-col size="3">
-        <ion-button (click)="mostrarAlertaSubtracao()">-</ion-button>
+        <ion-button (click)="mostrarAlertaSubtracao()" color="dark">-</ion-button>
       </ion-col>
       <ion-col size="3">
-        <ion-button (click)="mostrarAlertaMultiplicacao()">*</ion-button>
+        <ion-button (click)="mostrarAlertaMultiplicacao()" color="dark">*</ion-button>
       </ion-col>
       <ion-col size="3">
-        <ion-button (click)="mostrarAlertaDivisao()">/</ion-button>
+        <ion-button (click)="mostrarAlertaDivisao()" color="dark">/</ion-button>
       </ion-col>
       <ion-col size="6">
-        <ion-button (click)="mostrarAlertaMaior()">Maior</ion-button>
+        <ion-button (click)="mostrarAlertaMaior()" color="dark">Maior</ion-button>
       </ion-col>
       <ion-col size="6">
-        <ion-button (click)="mostrarAlertaMenor()">Menor</ion-button>
+        <ion-button (click)="mostrarAlertaMenor()" color="dark">Menor</ion-button>
       </ion-col>
     </ion-row>
-    </ion-grid>
+  </ion-grid>
 
-    <ion-item>
+    <ion-item class="ion-margin-vertical">
       <ion-label>Resultado:</ion-label>
       <ion-input [(ngModel)]="resultado" readonly></ion-input>
     </ion-item>
