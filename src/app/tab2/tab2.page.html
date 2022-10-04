@@ -1,17 +1,99 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+  <ion-toolbar color="dark">
+    <ion-title> Calculadora 2 </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="medium">
+  <ion-card>
+    <ion-item lines="full">
+      <ion-label position="stacked">Operação</ion-label>
+      <ion-input class="ion-text-right" readonly [(ngModel)]="operacao"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label>Resultado: </ion-label>
+      <ion-input class="ion-text-right resultado" readonly [(ngModel)]="resultado"></ion-input>
+    </ion-item>
+  </ion-card>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-button expand="full" color="medium">%</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="limparMemoria()" expand="full" color="medium">CE</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="limparMemoria()" expand="full" color="medium">C</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="apagarCaracter()" expand="full" color="medium">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="full" color="medium">1/X</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="full" color="medium">X²</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="full" color="medium">X^1/2</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('/')" expand="full" color="medium">/</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('7')" expand="full" color="light">7</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('8')" expand="full" color="light">8</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('9')" expand="full" color="light">9</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('*')" expand="full" color="medium">X</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('4')" expand="full" color="light">4</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('5')" expand="full" color="light">5</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('6')" expand="full" color="light">6</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('-')" expand="full" color="medium">-</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('1')" expand="full" color="light">1</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('2')" expand="full" color="light">2</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('3')" expand="full" color="light">3</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('+')" expand="full" color="medium">+</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="full" color="light">+/-</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('0')" expand="full" color="light">0</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="adicionarValor('.')" expand="full" color="light">,</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="full">=</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>
