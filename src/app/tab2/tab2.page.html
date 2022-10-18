@@ -26,7 +26,7 @@
           <ion-button (click)="limparMemoria()" expand="full" color="medium">CE</ion-button>
         </ion-col>
         <ion-col size="3">
-          <ion-button (click)="limparMemoria()" expand="full" color="medium">C</ion-button>
+          <ion-button (click)="limparOperacao()" expand="full" color="medium">C</ion-button>
         </ion-col>
         <ion-col size="3">
           <ion-button (click)="apagarCaracter()" expand="full" color="medium">
@@ -82,7 +82,7 @@
           <ion-button (click)="adicionarValor('+')" expand="full" color="medium">+</ion-button>
         </ion-col>
         <ion-col size="3">
-          <ion-button expand="full" color="light">+/-</ion-button>
+          <ion-button (click)="inverterValor()" expand="full" color="light">+/-</ion-button>
         </ion-col>
         <ion-col size="3">
           <ion-button (click)="adicionarValor('0')" expand="full" color="light">0</ion-button>
@@ -91,7 +91,7 @@
           <ion-button (click)="adicionarValor('.')" expand="full" color="light">,</ion-button>
         </ion-col>
         <ion-col size="3">
-          <ion-button expand="full">=</ion-button>
+          <ion-button (click)="calcularOperacao()" expand="full">=</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
