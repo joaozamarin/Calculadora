@@ -1,6 +1,7 @@
 import { IMemoria } from './../models/IMemoria.model';
 import { Component } from '@angular/core';
 import { evaluate } from 'mathjs';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -17,7 +18,18 @@ export class Tab2Page {
 
   memoria: IMemoria[] = [];
 
-  constructor() {}
+  constructor(private alertController: AlertController) {}
+
+  async mostrarAlertaMemoria() {
+    const alert = await this.alertController.create({
+      header: 'Atenção',
+      subHeader: '',
+      message: 'Não foi possível salvar na memória. Adicione uma operação!',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
 
   adicionarMemoria()
   {
@@ -41,7 +53,7 @@ export class Tab2Page {
       this.memoria.push(memoria);
     }else
     {
-
+      this.mostrarAlertaMemoria();
     }
 
     console.log(this.memoria);
