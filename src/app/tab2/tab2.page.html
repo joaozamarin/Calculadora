@@ -19,6 +19,24 @@
   <ion-card>
     <ion-grid>
       <ion-row>
+        <ion-col size="2">
+          <ion-button expand="full" color="medium">MC</ion-button>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button expand="full" color="medium">MR</ion-button>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button expand="full" color="medium">M+</ion-button>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button expand="full" color="medium">M-</ion-button>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button expand="full" color="medium">MS</ion-button>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button expand="full" color="medium">M</ion-button>
+        </ion-col>
         <ion-col size="3">
           <ion-button expand="full" color="medium">%</ion-button>
         </ion-col>
@@ -82,13 +100,13 @@
           <ion-button (click)="adicionarValor('+')" expand="full" color="medium">+</ion-button>
         </ion-col>
         <ion-col size="3">
-          <ion-button (click)="inverterValor()" expand="full" color="light">+/-</ion-button>
+          <ion-button (click)="inverterValor()" expand="full" color="medium">+/-</ion-button>
         </ion-col>
         <ion-col size="3">
           <ion-button (click)="adicionarValor('0')" expand="full" color="light">0</ion-button>
         </ion-col>
         <ion-col size="3">
-          <ion-button (click)="adicionarValor('.')" expand="full" color="light">,</ion-button>
+          <ion-button (click)="adicionarValor('.')" expand="full" color="medium">,</ion-button>
         </ion-col>
         <ion-col size="3">
           <ion-button (click)="calcularOperacao()" expand="full">=</ion-button>

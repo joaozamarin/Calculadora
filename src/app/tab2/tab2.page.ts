@@ -13,6 +13,9 @@ export class Tab2Page {
   numero = false;
   caracter = true;
   caracteres = ['.', '/', '*', '+', '-'];
+
+  memoria = [];
+
   constructor() {}
 
   calcularOperacao()
