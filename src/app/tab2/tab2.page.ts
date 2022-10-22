@@ -1,3 +1,4 @@
+import { IMemoria } from './../models/IMemoria.model';
 import { Component } from '@angular/core';
 import { evaluate } from 'mathjs';
 
@@ -14,9 +15,37 @@ export class Tab2Page {
   caracter = true;
   caracteres = ['.', '/', '*', '+', '-'];
 
-  memoria = [];
+  memoria: IMemoria[] = [];
 
   constructor() {}
+
+  adicionarMemoria()
+  {
+    if(this.operacao !== '' && this.resultado !== '')
+    {
+      const memoria: IMemoria = {
+        operacao: this.operacao,
+        resultado: Number(this.resultado)
+      };
+
+      this.memoria.push(memoria);
+    }else if(this.operacao !== '' && this.resultado === '')
+    {
+      this.calcularOperacao();
+
+      const memoria: IMemoria = {
+        operacao: this.operacao,
+        resultado: Number(this.resultado)
+      };
+
+      this.memoria.push(memoria);
+    }else
+    {
+
+    }
+
+    console.log(this.memoria);
+  }
 
   calcularOperacao()
   {
