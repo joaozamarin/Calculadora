@@ -59,6 +59,31 @@ export class Tab2Page {
     console.log(this.memoria);
   }
 
+  limparMemoriaMC()
+  {
+    //
+  }
+
+  rechamarMemoria()
+  {
+    //
+  }
+
+  adicaoMemoria()
+  {
+    //
+  }
+
+  subtrairMemoria()
+  {
+    //
+  }
+
+  verMemoria()
+  {
+    //
+  }
+
   calcularOperacao()
   {
     try
