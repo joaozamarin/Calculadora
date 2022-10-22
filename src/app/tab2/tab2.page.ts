@@ -20,11 +20,11 @@ export class Tab2Page {
 
   constructor(private alertController: AlertController) {}
 
-  async mostrarAlertaMemoria() {
+  async mostrarAlertaMemoria(titulo, mensagem) {
     const alert = await this.alertController.create({
-      header: 'Atenção',
+      header: titulo,
       subHeader: '',
-      message: 'Não foi possível salvar na memória. Adicione uma operação!',
+      message: mensagem,
       buttons: ['OK'],
     });
 
@@ -53,7 +53,7 @@ export class Tab2Page {
       this.memoria.push(memoria);
     }else
     {
-      this.mostrarAlertaMemoria();
+      this.mostrarAlertaMemoria('Atenção', 'Não foi possível salvar na memória. Adicione uma operação!');
     }
 
     console.log(this.memoria);
