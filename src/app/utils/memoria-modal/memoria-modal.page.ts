@@ -1,4 +1,6 @@
+import { IMemoria } from './../../models/IMemoria.model';
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-memoria-modal',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./memoria-modal.page.scss'],
 })
 export class MemoriaModalPage implements OnInit {
+  memoria: IMemoria[];
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
+
+  confirm() {
+    return this.modalCtrl.dismiss('confirm');
+  }
 
   ngOnInit() {
   }

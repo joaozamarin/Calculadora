@@ -120,7 +120,7 @@ export class Tab2Page {
 
   verMemoria()
   {
-    //
+    this.abrirModal();
   }
 
   calcularOperacao()
