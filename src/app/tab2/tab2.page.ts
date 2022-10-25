@@ -20,7 +20,7 @@ export class Tab2Page {
 
   constructor(private alertController: AlertController) {}
 
-  async mostrarAlertaMemoria(titulo, mensagem) {
+  async mostrarAlertaMemoria(titulo: string, mensagem: string) {
     const alert = await this.alertController.create({
       header: titulo,
       subHeader: '',
@@ -61,12 +61,17 @@ export class Tab2Page {
 
   limparMemoriaMC()
   {
-    //
+    this.memoria = [];
+    console.log(this.memoria);
   }
 
   rechamarMemoria()
   {
-    //
+    const memoria = this.memoria[this.memoria.length - 1];
+    this.operacao = memoria.operacao;
+    this.resultado = memoria.resultado.toString();
+
+    console.log('Memória: ', memoria);
   }
 
   adicaoMemoria()
